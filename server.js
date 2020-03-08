@@ -1,4 +1,6 @@
-// try to use devnote [env]
+// style.css
+// deploy on heroku (git push heroku master)
+
 
 var express = require("express");
 
