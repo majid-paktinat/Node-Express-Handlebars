@@ -1,14 +1,7 @@
-// *********************************************************************************
-// CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
-// *********************************************************************************
-
-require('dotenv').config();
-
-// Requiring mysql package
-var mysql = require("mysql");
+require('dotenv').config(); // Loads environment variables from a .env file into the process.env variable
+let mysql = require("mysql"); // Requiring mysql package
 
 // Setting up our connection information
-let source;
 let connection;
 if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
