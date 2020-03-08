@@ -1,20 +1,4 @@
-// run a server
-
-// put a textbox and submit button on index page
-// on click create a ajax and call server
-
-// on server define route and static.express
-// on the route add the data to data base
-
-// on index use slidebar to call a route and receive data
-// as per the status use two handlebars in two column to define it
-
-// write an orm file to do inser to db and get from db
-// in server route call orm method
-
 // try to use devnote [env]
-
-// be fekre req.body.burger_name, req.body.devoured bash!!!
 
 var express = require("express");
 
