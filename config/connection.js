@@ -2,26 +2,26 @@
 // CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
 // *********************************************************************************
 
+require('dotenv').config();
+
 // Requiring mysql package
 var mysql = require("mysql");
 
 // Setting up our connection information
 let source;
-source = (process.env.JAWSDB_URL) ? process.env.JAWSDB_URL : {
-                                                              localhost: {
-                                                                host: "localhost",
-                                                                port: 3306,
-                                                                user: "root",
-                                                                password: "12345678",
-                                                                database: "burgers_db"
-                                                              }
-                                                            }
-
-
-
-// Creating our connection
-var connection = mysql.createConnection(source.localhost);
-
+let connection;
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+}
+else {
+  connection = mysql.createConnection({
+                                        host: process.env.host,
+                                        port: process.env.port,
+                                        user: process.env.user,
+                                        password: process.env.password,
+                                        database: process.env.database
+                                      });
+}
 
 // Connecting to the database.
 connection.connect(function(err) {
