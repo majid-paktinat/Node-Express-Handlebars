@@ -15,8 +15,6 @@ I have created a burger logger with MySQL, Node, Express, Handlebars and a homem
 
 * Your app will store every burger in a database, whether devoured or not.
 
-* [Check out this video of the app for a run-through of how it works](https://youtu.be/msvdn95x9OM).
-
 
 #### Config Setup
 
@@ -116,6 +114,12 @@ All the recommended files and directories from the steps above should look like 
 │
 └── views
     ├── index.handlebars
+    │
     └── layouts
-        └── main.handlebars
+    │    └── main.handlebars
+    └── partials
+          └── burgers
+               └── burger-devoured.handlebars
+               └── burger-ready.handlebars
+
 ```
